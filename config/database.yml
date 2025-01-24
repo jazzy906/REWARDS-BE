@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5
+  username: karan
+  password: Abc@1234
+  host: localhost
+
+development:
+  <<: *default
+  database: rewards_app_development
+
+test:
+  <<: *default
+  database: rewards_app_test
+
+production:
+  <<: *default
+  database: rewards_app_production
